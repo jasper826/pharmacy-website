@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <title>CarePlus Pharmacy</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePlus Pharmacy</title>
 </head>
 <body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <h2>CarePlus Pharmacy</h2>
+    <nav>
+      <a href="#home">Home</a> | 
+      <a href="#services">Services</a> | 
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <!-- Main Content Area -->
+  <main>
     <h1>Welcome to CarePlus Pharmacy</h1>
-    <p>Your trusted local pharmacy</p>
+    <p>Your trusted local partner for health and wellness.</p>
+    <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Prescription Refills:</strong> Quick and hassle-free prescription fulfillment.</li>
+      <li><strong>Health Screenings:</strong> Regular blood pressure and glucose checks.</li>
+      <li><strong>Vaccinations:</strong> Flu shots and routine immunizations available daily.</li>
+    </ul>
+  </section>
+
+  <hr>
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Send us a message or request a prescription refill:</p>
+    
+    <form>
+      <div>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <br>
+      <div>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <br>
+      <div>
+        <label for="message">Your Message / Refill Request:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  </main>
+
 </body>
 </html>
