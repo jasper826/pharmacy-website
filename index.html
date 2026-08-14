@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[14/08/2026 03:09 AM] Jehu: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,52 +12,334 @@
   <header>
     <h2>CarePlus Pharmacy</h2>
     <nav>
-      <a href="#home">Home</a> | 
-      <a href="#services">Services</a> | 
+      <a href="#home">Home</a>
+      <a href="#medicines">Medicines</a>
+      <a href="#services">Services</a>
+      <a href="#prescription">Prescription</a>
+      <a href="#about">About Us</a>
       <a href="#contact">Contact Us</a>
+      <a href="#cart" class="nav-btn" id="cart-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
+      <a href="#login" class="nav-btn login-btn">Login</a>
     </nav>
   </header>
 
-
   <!-- Main Content Area -->
   <main>
-    <h1>Welcome to CarePlus Pharmacy</h1>
-    <p>Your trusted local partner for health and wellness.</p>
-    <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>Prescription Refills:</strong> Quick and hassle-free prescription fulfillment.</li>
-      <li><strong>Health Screenings:</strong> Regular blood pressure and glucose checks.</li>
-      <li><strong>Vaccinations:</strong> Flu shots and routine immunizations available daily.</li>
-    </ul>
-  </section>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to CarePlus Pharmacy</h1>
+      <p>Your trusted local partner for health and wellness.</p>
+    </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Send us a message or request a prescription refill:</p>
-    
-    <form>
-      <div>
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required>
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Prescription Refills:</strong> Quick and hassle-free prescription fulfillment.</li>
+        <li><strong>Health Screenings:</strong> Regular blood pressure and glucose checks.</li>
+        <li><strong>Vaccinations:</strong> Flu shots and routine immunizations available daily.</li>
+      </ul>
+    </section>
+
+    <!-- Medicines Section -->
+    <section id="medicines">
+      <h2>Medicines by Category</h2>
+
+      <!-- Category 1: Antibiotics -->
+      <div class="category-block">
+        <h3>💊 Antibiotics</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Amoxicillin">
+            <h4>Amoxicillin 500mg</h4>
+            <p class="price">150 ETB</p>
+            <p>Broad-spectrum antibiotic for bacterial infections.</p>
+            <button class="cart-btn" onclick="addToCart('Amoxicillin 500mg', 150)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Azithromycin">
+            <h4>Azithromycin 250mg</h4>
+            <p class="price">280 ETB</p>
+            <p>Treats respiratory and skin infections.</p>
+            <button class="cart-btn" onclick="addToCart('Azithromycin 250mg', 280)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=300&auto=format&fit=crop" alt="Ciprofloxacin">
+            <h4>Ciprofloxacin 500mg</h4>
+            <p class="price">220 ETB</p>
+            <p>Effective against urinary and chest infections.</p>
+            <button class="cart-btn" onclick="addToCart('Ciprofloxacin 500mg', 220)">Add to Cart 🛒</button>
+          </div>
+        </div>
       </div>
-      <br>
-      <div>
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" required>
+
+      <!-- Category 2: Anticoagulants (Blood Thinners) -->
+      <div class="category-block">
+        <h3>🩸 Anticoagulants</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=300&auto=format&fit=crop" alt="Warfarin">
+            <h4>Warfarin 5mg</h4>
+            <p class="price">200 ETB</p>
+            <p>Prevents blood clots and stroke risks.</p>
+            <button class="cart-btn" onclick="addToCart('Warfarin 5mg', 200)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Aspirin">
+            <h4>Aspirin 81mg</h4>
+            <p class="price">90 ETB</p>
+            <p>Low-dose antiplatelet therapy for cardiovascular protection and blood clot prevention.</p>
+[14/08/2026 03:09 AM] Jehu: <button class="cart-btn" onclick="addToCart('Aspirin 81mg', 90)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Rivaroxaban">
+            <h4>Rivaroxaban 15mg</h4>
+            <p class="price">450 ETB</p>
+            <p>Oral anticoagulant for deep vein thrombosis.</p>
+            <button class="cart-btn" onclick="addToCart('Rivaroxaban 15mg', 450)">Add to Cart 🛒</button>
+          </div>
+        </div>
       </div>
-      <br>
-      <div>
-        <label for="message">Your Message / Refill Request:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea>
+
+      <!-- Category 3: Analgesics & Antipyretics -->
+      <div class="category-block">
+        <h3>🩹 Analgesics & Pain Relief</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=300&auto=format&fit=crop" alt="Paracetamol">
+            <h4>Paracetamol 500mg</h4>
+            <p class="price">60 ETB</p>
+            <p>Quick pain relief and fever reduction.</p>
+            <button class="cart-btn" onclick="addToCart('Paracetamol 500mg', 60)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Ibuprofen">
+            <h4>Ibuprofen 400mg</h4>
+            <p class="price">110 ETB</p>
+            <p>Anti-inflammatory pain reliever.</p>
+            <button class="cart-btn" onclick="addToCart('Ibuprofen 400mg', 110)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=300&auto=format&fit=crop" alt="Diclofenac">
+            <h4>Diclofenac 50mg</h4>
+            <p class="price">130 ETB</p>
+            <p>Relieves joint pain and inflammation.</p>
+            <button class="cart-btn" onclick="addToCart('Diclofenac 50mg', 130)">Add to Cart 🛒</button>
+          </div>
+        </div>
       </div>
-      <br>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+
+      <!-- Category 4: Antihypertensives & Stroke -->
+      <div class="category-block">
+        <h3>🧠 Stroke & Cardiovascular</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=300&auto=format&fit=crop" alt="Amlodipine">
+            <h4>Amlodipine 5mg</h4>
+            <p class="price">180 ETB</p>
+            <p>Lowers blood pressure and prevents strokes.</p>
+            <button class="cart-btn" onclick="addToCart('Amlodipine 5mg', 180)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=300&auto=format&fit=crop" alt="Clopidogrel">
+            <h4>Clopidogrel 75mg</h4>
+            <p class="price">320 ETB</p>
+            <p>Antiplatelet medication that prevents harmful blood clots after stroke or heart attack.</p>
+            <button class="cart-btn" onclick="addToCart('Clopidogrel 75mg', 320)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=300&auto=format&fit=crop" alt="Atorvastatin">
+            <h4>Atorvastatin 20mg</h4>
+            <p class="price">250 ETB</p>
+            <p>Reduces cholesterol to protect blood vessels.</p>
+            <button class="cart-btn" onclick="addToCart('Atorvastatin 20mg', 250)">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 5: Antimalarials -->
+      <div class="category-block">
+        <h3>🦟 Antimalarials</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Coartem">
+[14/08/2026 03:09 AM] Jehu: <h4>Artemether/Lumefantrine (Coartem)</h4>
+            <p class="price">190 ETB</p>
+            <p>First-line treatment for uncomplicated Plasmodium malaria.</p>
+            <button class="cart-btn" onclick="addToCart('Coartem', 190)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Chloroquine">
+            <h4>Chloroquine Phosphate 250mg</h4>
+            <p class="price">120 ETB</p>
+            <p>Treatment and prevention of sensitive malaria strains.</p>
+            <button class="cart-btn" onclick="addToCart('Chloroquine 250mg', 120)">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 6: Antitubercular (TB) -->
+      <div class="category-block">
+        <h3>🫁 Tuberculosis (TB) Care</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=300&auto=format&fit=crop" alt="Rifampicin">
+            <h4>Rifampicin / Isoniazid 300/150mg</h4>
+            <p class="price">350 ETB</p>
+            <p>Combination antibiotic therapy for active tuberculosis.</p>
+            <button class="cart-btn" onclick="addToCart('Rifampicin/Isoniazid', 350)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=300&auto=format&fit=crop" alt="Ethambutol">
+            <h4>Ethambutol 400mg</h4>
+            <p class="price">210 ETB</p>
+            <p>Essential oral agent used in regimen for TB management.</p>
+            <button class="cart-btn" onclick="addToCart('Ethambutol 400mg', 210)">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 7: Antiretrovirals (HIV Management) -->
+      <div class="category-block">
+        <h3>🛡️ HIV Management (ART)</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=300&auto=format&fit=crop" alt="TLD Combination">
+            <h4>Tenofovir/Lamivudine/Dolutegravir (TLD)</h4>
+            <p class="price">500 ETB</p>
+            <p>Single-tablet regimen for viral suppression in HIV-1.</p>
+            <button class="cart-btn" onclick="addToCart('TLD Combination', 500)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Efavirenz">
+            <h4>Efavirenz 600mg</h4>
+            <p class="price">380 ETB</p>
+            <p>Non-nucleoside reverse transcriptase inhibitor (NNRTI) used in antiretroviral combination therapy.</p>
+            <button class="cart-btn" onclick="addToCart('Efavirenz 600mg', 380)">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 8: Oncology (Cancer Support) -->
+      <div class="category-block">
+        <h3>🎗️ Oncology & Cancer Support</h3>
+        <div class="medicine-grid">
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Tamoxifen">
+            <h4>Tamoxifen 20mg</h4>
+            <p class="price">650 ETB</p>
+            <p>Hormone therapy for hormone-receptor-positive cancer treatment.</p>
+            <button class="cart-btn" onclick="addToCart('Tamoxifen 20mg', 650)">Add to Cart 🛒</button>
+          </div>
+          <div class="med-card">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Ondansetron">
+            <h4>Ondansetron 8mg</h4>
+            <p class="price">290 ETB</p>
+            <p>Prevents nausea and vomiting caused by chemotherapy.</p>
+            <button class="cart-btn" onclick="addToCart('Ondansetron 8mg', 290)">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+    </section>
+[14/08/2026 03:09 AM] Jehu: <!-- Shopping Cart Section -->
+    <section id="cart">
+      <h2>Your Shopping Cart 🛒</h2>
+      <div class="cart-box">
+        <ul id="cart-items" class="cart-list">
+          <li class="empty-msg">Your cart is currently empty. Add medicines above!</li>
+        </ul>
+        <div class="cart-summary">
+          <h3>Total: <span id="cart-total">0</span> ETB</h3>
+          <button class="checkout-btn" onclick="alert('Cart ready for backend processing!')">Proceed to Checkout 💳</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prescription Upload Section -->
+    <section id="prescription">
+      <h2>Upload Your Prescription</h2>
+      <p>Upload a clear photo or PDF of your doctor's prescription for quick fulfillment.</p>
+      
+      <form class="prescription-form">
+        <div class="form-group">
+          <label for="rx-name">Patient Full Name:</label>
+          <input type="text" id="rx-name" name="rx-name" placeholder="e.g. Abebe Bikila" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-phone">Phone Number:</label>
+          <input type="tel" id="rx-phone" name="rx-phone" placeholder="e.g. +251 911 234 567" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-file">Upload Prescription Image/Document (JPG, PNG, PDF):</label>
+          <input type="file" id="rx-file" name="rx-file" accept="image/*,.pdf" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-notes">Additional Notes / Delivery Address:</label>
+          <textarea id="rx-notes" name="rx-notes" rows="3" placeholder="Specify preferred delivery times or health conditions..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Prescription 📤</button>
+      </form>
+    </section>
+
+    <!-- User Account / Login Section -->
+    <section id="login">
+      <h2>User Login & Account</h2>
+      <p>Log in to view past order history and manage your prescriptions.</p>
+
+      <div class="auth-box">
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">Email Address or Phone:</label>
+            <input type="text" id="email" name="email" placeholder="enter your email or phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required>
+          </div>
+
+          <button type="submit" class="login-submit-btn">Login 🔐</button>
+          <p class="auth-toggle">Don't have an account? <a href="#">Register here</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About CarePlus Pharmacy</h2>
+      <p>CarePlus Pharmacy is dedicated to providing compassionate care, authentic pharmaceuticals, and seamless delivery options to support healthy communities.</p>
+      <p><strong>Operating Hours:</strong> Monday – Saturday: 8:00 AM – 9:00 PM | Sunday: Emergency Services Only</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Send us a message or request general assistance:</p>
+      
+      <form>
+        <div>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
+
+  <!-- External JavaScript file linking -->
+  <script src="script.js"></script>
 
 </body>
 </html>
