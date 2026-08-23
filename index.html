@@ -1,4 +1,4 @@
-[14/08/2026 03:09 AM] Jehu: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,7 @@
       <a href="#medicines">Medicines</a>
       <a href="#services">Services</a>
       <a href="#prescription">Prescription</a>
+      <a href="#pharmacist-dashboard">Pharmacist View</a>
       <a href="#about">About Us</a>
       <a href="#contact">Contact Us</a>
       <a href="#cart" class="nav-btn" id="cart-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
@@ -43,7 +44,26 @@
 
     <!-- Medicines Section -->
     <section id="medicines">
-      <h2>Medicines by Category</h2>
+      <h2>Medicines Catalog & Search</h2>
+
+      <!-- Live Search & Filter Bar for Backend Integration -->
+      <div class="search-container" style="margin: 20px 0; text-align: center;">
+        <input 
+          type="text" 
+          id="search-med" 
+          placeholder="🔍 Search medicines by name or category (e.g. Paracetamol, Antibiotics)..." 
+          style="width: 80%; max-width: 500px; padding: 12px; font-size: 16px; border: 2px solid #007bff; border-radius: 8px;"
+        >
+      </div>
+
+      <!-- Dynamic Live Database Medicines Container -->
+      <div id="medicine-grid" class="medicine-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
+        <!-- Live MongoDB medicines will auto-load here via script.js -->
+      </div>
+
+      <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+      <h3>Browse Static Categories</h3>
 
       <!-- Category 1: Antibiotics -->
       <div class="category-block">
@@ -89,7 +109,7 @@
             <h4>Aspirin 81mg</h4>
             <p class="price">90 ETB</p>
             <p>Low-dose antiplatelet therapy for cardiovascular protection and blood clot prevention.</p>
-[14/08/2026 03:09 AM] Jehu: <button class="cart-btn" onclick="addToCart('Aspirin 81mg', 90)">Add to Cart 🛒</button>
+            <button class="cart-btn" onclick="addToCart('Aspirin 81mg', 90)">Add to Cart 🛒</button>
           </div>
           <div class="med-card">
             <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop" alt="Rivaroxaban">
@@ -101,7 +121,7 @@
         </div>
       </div>
 
-      <!-- Category 3: Analgesics & Antipyretics -->
+      <!-- Category 3: Analgesics & Pain Relief -->
       <div class="category-block">
         <h3>🩹 Analgesics & Pain Relief</h3>
         <div class="medicine-grid">
@@ -163,7 +183,7 @@
         <div class="medicine-grid">
           <div class="med-card">
             <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=300&auto=format&fit=crop" alt="Coartem">
-[14/08/2026 03:09 AM] Jehu: <h4>Artemether/Lumefantrine (Coartem)</h4>
+            <h4>Artemether/Lumefantrine (Coartem)</h4>
             <p class="price">190 ETB</p>
             <p>First-line treatment for uncomplicated Plasmodium malaria.</p>
             <button class="cart-btn" onclick="addToCart('Coartem', 190)">Add to Cart 🛒</button>
@@ -241,7 +261,8 @@
         </div>
       </div>
     </section>
-[14/08/2026 03:09 AM] Jehu: <!-- Shopping Cart Section -->
+
+    <!-- Shopping Cart Section -->
     <section id="cart">
       <h2>Your Shopping Cart 🛒</h2>
       <div class="cart-box">
@@ -283,6 +304,20 @@
 
         <button type="submit" class="submit-btn">Submit Prescription 📤</button>
       </form>
+    </section>
+
+    <!-- Pharmacist Review Dashboard Section -->
+    <section id="pharmacist-dashboard" style="padding: 25px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>🩺 Pharmacist Dashboard - Prescription Review</h2>
+        <button onclick="fetchPharmacistPrescriptions()" style="padding: 8px 16px; background: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+          🔄 Refresh List
+        </button>
+      </div>
+
+      <div id="rx-dashboard-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
+        <p>Loading prescription submissions...</p>
+      </div>
     </section>
 
     <!-- User Account / Login Section -->
@@ -337,6 +372,10 @@
       </form>
     </section>
   </main>
+
+  <footer style="text-align: center; padding: 20px; background: #343a40; color: white; margin-top: 40px;">
+    <p>&copy; CarePlus Pharmacy Web Application. Built for reliable patient care.</p>
+  </footer>
 
   <!-- External JavaScript file linking -->
   <script src="script.js"></script>

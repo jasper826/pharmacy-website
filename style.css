@@ -363,4 +363,35 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0369a1;
+}/* Responsive Layout Improvements */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .medicine-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cart Row Layout */
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e2e8f0;
 }
