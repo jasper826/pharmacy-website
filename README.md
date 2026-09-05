@@ -1,6 +1,6 @@
-﻿# CarePlus Pharmacy Web Application
+# Kana Drug Store Web Application
 
-CarePlus Pharmacy is a full-stack pharmacy web application providing patient medicine search, interactive shopping cart, prescription document upload, pharmacist review dashboard, and user authentication.
+Kana Drug Store is a full-stack pharmacy web application for **Kana Drug Store** in Arba Minch, Ethiopia (established November 21, 2016; operating 24/7 in front of Arba Minch General Hospital and near Referral Hospital). It provides patient medicine search, interactive shopping cart, prescription document upload, wholesale quotation requests, pharmacist review dashboard, and user authentication.
 
 ---
 
@@ -8,6 +8,7 @@ CarePlus Pharmacy is a full-stack pharmacy web application providing patient med
 
 - **Medicines Catalog & Live Search**: Filter medications across 8 clinical categories with dynamic debounced search.
 - **Shopping Cart & Checkout**: Add/remove medications, adjust quantities, calculate totals in ETB, and place orders with flexible payment methods (Cash on Delivery, Telebirr, CBE Birr).
+- **24/7 Emergency & B2B Wholesale**: Direct emergency call triggers (`0922142311`) and hospital/clinic wholesale inquiry submissions.
 - **Prescription Upload**: Secure patient upload of prescription images (JPG, PNG, WEBP) and PDF documents.
 - **Pharmacist Review Dashboard**: Real-time review interface for pharmacists to view uploaded prescriptions and update fulfillment statuses.
 - **User Authentication**: Secure JWT-based registration and login with bcrypt password hashing.
@@ -39,7 +40,7 @@ npm install
 Copy `.env.example` to `.env` and fill in your settings:
 ```bash
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/careplus_pharmacy
+MONGO_URI=mongodb://127.0.0.1:27017/kana_drug_store
 JWT_SECRET=your_super_secret_jwt_key
 ```
 
@@ -95,8 +96,8 @@ Open **`http://localhost:5000`** in your browser.
 
 ### Deploying with Docker
 ```bash
-docker build -t careplus-pharmacy .
-docker run -p 5000:5000 -e MONGO_URI="mongodb+srv://..." -e JWT_SECRET="..." careplus-pharmacy
+docker build -t kana-drug-store .
+docker run -p 5000:5000 -e MONGO_URI="mongodb+srv://..." -e JWT_SECRET="..." kana-drug-store
 ```
 
 ---

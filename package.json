@@ -1,7 +1,7 @@
 {
-  "name": "careplus-pharmacy",
+  "name": "kana-drug-store",
   "version": "1.0.0",
-  "description": "CarePlus Pharmacy Web Application",
+  "description": "Kana Drug Store - 24/7 Pharmacy & Healthcare Supply in Arba Minch, Ethiopia",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

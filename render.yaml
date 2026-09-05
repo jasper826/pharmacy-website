@@ -1,6 +1,6 @@
-﻿services:
+services:
   - type: web
-    name: careplus-pharmacy
+    name: kana-drug-store
     env: node
     plan: free
     buildCommand: npm install

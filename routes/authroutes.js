@@ -6,7 +6,7 @@ const User = require('../models/user');
 
 // Helper function to generate JWT Token
 const generateToken = (id, role) => {
-  const secret = process.env.JWT_SECRET || 'careplus_default_jwt_secret_2026';
+  const secret = process.env.JWT_SECRET || 'kana_drug_store_default_jwt_secret_2026';
   return jwt.sign({ id, role }, secret, {
     expiresIn: '7d' // Token valid for 7 days
   });
@@ -120,7 +120,7 @@ router.get('/me', async (req, res) => {
     }
 
     const token = authHeader.split(' ')[1];
-    const secret = process.env.JWT_SECRET || 'careplus_default_jwt_secret_2026';
+    const secret = process.env.JWT_SECRET || 'kana_drug_store_default_jwt_secret_2026';
     const decoded = jwt.verify(token, secret);
 
     const user = await User.findById(decoded.id).select('-password');
