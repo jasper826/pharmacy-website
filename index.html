@@ -569,7 +569,7 @@
         <p>Send a clear photo or PDF of your doctor's prescription for quick preparation and bedside delivery.</p>
       </div>
 
-      <form class="prescription-form">
+      <form class="prescription-form" id="prescription-form">
         <div class="form-group">
           <label for="rx-name">Patient Full Name:</label>
           <input type="text" id="rx-name" name="rx-name" placeholder="e.g. Abebe Bikila" required>
@@ -583,6 +583,7 @@
         <div class="form-group">
           <label for="rx-file">Upload Prescription Image/Document (JPG, PNG, WEBP, PDF - Max 10MB):</label>
           <input type="file" id="rx-file" name="rx-file" accept="image/*,.pdf" required>
+          <div id="file-preview" style="display: none; margin-top: 8px; padding: 8px; background: #f1f5f9; border-radius: 6px; font-size: 0.85rem; color: #334155;"></div>
         </div>
 
         <div class="form-group">
