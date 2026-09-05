@@ -3,46 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarePlus Pharmacy</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Kana Drug Store | 24/7 Pharmacy & Medical Supply in Arba Minch, Ethiopia</title>
+  <meta name="description" content="Kana Drug Store is Arba Minch's trusted 24/7 pharmacy, established in 2016. Located in front of Arba Minch General Hospital & near the Referral Hospital. We stock every kind of medicine for citizens and provide bulk supply for clinics and hospitals. Call 0922142311.">
+  <meta name="keywords" content="Kana Drug Store, Pharmacy in Arba Minch, 24/7 Pharmacy Ethiopia, Arba Minch General Hospital Pharmacy, Arba Minch Referral Hospital medicine, wholesale medicine Ethiopia, emergency medicine Arba Minch, buy medicine Arba Minch">
+  <meta name="author" content="Kana Drug Store">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kana Drug Store | 24/7 Pharmacy in Arba Minch, Ethiopia">
+  <meta property="og:description" content="Open 24 Hours / 7 Days a week in front of Arba Minch General Hospital. Supplying every kind of medicine for individuals and institutional bulk orders.">
+
+  <!-- Favicon and Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Local Business Schema (JSON-LD) for Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pharmacy",
+    "name": "Kana Drug Store",
+    "description": "Licensed 24/7 community and institutional pharmacy providing every kind of medicine in Arba Minch, Ethiopia.",
+    "foundingDate": "2016-11-21",
+    "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&auto=format&fit=crop",
+    "telephone": "+251922142311",
+    "email": "bekellidetu@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "In front of Arba Minch General Hospital, near Referral Hospital",
+      "addressLocality": "Arba Minch",
+      "addressRegion": "Gamo Zone / Southern Region",
+      "addressCountry": "ET"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "ETB",
+    "paymentAccepted": "Cash, Telebirr, CBE Birr"
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- Top Emergency & Quick Contact Bar -->
+  <div class="top-contact-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+        <span class="live-status-pill">
+          <span class="pulse-dot"></span> OPEN 24/7 (Always Open)
+        </span>
+        <span class="top-bar-location">📍 In front of Arba Minch General Hospital</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:0922142311" class="top-bar-link phone-link">📞 Call 24/7: <strong>0922142311</strong></a>
+        <a href="mailto:bekellidetu@gmail.com" class="top-bar-link email-link">✉️ bekellidetu@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Sticky Navigation Header -->
   <header>
-    <h2>CarePlus Pharmacy</h2>
+    <div class="header-brand">
+      <a href="#home" class="brand-logo-link">
+        <span class="brand-cross">✚</span>
+        <div class="brand-text-block">
+          <h2>Kana Drug Store</h2>
+          <span class="brand-tagline">Serving Arba Minch Since Nov 2016</span>
+        </div>
+      </a>
+    </div>
+
     <nav>
       <a href="#home">Home</a>
-      <a href="#medicines">Medicines</a>
-      <a href="#services">Services</a>
-      <a href="#prescription">Prescription</a>
-      <a href="#pharmacist-dashboard">Pharmacist View</a>
       <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#cart" class="nav-btn" id="cart-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
+      <a href="#medicines">Medicines Catalog</a>
+      <a href="#services">Services</a>
+      <a href="#b2b">Hospital & Bulk Supply</a>
+      <a href="#prescription">Upload Rx</a>
+      <a href="#pharmacist-dashboard">Pharmacist View</a>
+      <a href="#contact">Contact</a>
+      <a href="#cart" class="nav-btn cart-btn-nav" id="cart-nav">🛒 Cart (<span id="cart-count">0</span>)</a>
       <span id="nav-auth-container">
         <a href="#login" class="nav-btn login-btn" id="nav-login-btn">Login</a>
       </span>
+      <a href="tel:0922142311" class="nav-btn emergency-call-btn">📞 Call Now</a>
     </nav>
   </header>
 
   <!-- Main Content Area -->
   <main>
-    <!-- Home Section -->
-    <section id="home">
-      <h1>Welcome to CarePlus Pharmacy</h1>
-      <p>Your trusted local partner for health and wellness.</p>
+
+    <!-- 1. Hero Section: Dual Target (B2C Emergency Citizens & B2B Medical Procurement) -->
+    <section id="home" class="hero-section">
+      <div class="hero-badge-container">
+        <span class="badge-247">🟢 Open 24 Hours / 7 Days a Week</span>
+        <span class="badge-est">Established Nov 21, 2016</span>
+      </div>
+
+      <h1>Your Trusted 24/7 Pharmacy & Clinical Supply Partner in Arba Minch</h1>
+      
+      <p class="hero-lead">
+        Located directly <strong>in front of Arba Minch General Hospital</strong> and near the <strong>Referral Hospital</strong>. 
+        We carry <strong>every kind of medicine</strong> — providing immediate round-the-clock emergency relief for patients and reliable wholesale supply for hospitals, private clinics, and healthcare organizations.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="tel:0922142311" class="btn-hero btn-call-priority">
+          <span class="btn-icon">📞</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Emergency / Inquiries: Call Now</span>
+            <span class="btn-subtitle">0922142311 (24/7 Direct Line)</span>
+          </div>
+        </a>
+
+        <a href="#b2b" class="btn-hero btn-b2b-priority">
+          <span class="btn-icon">🏥</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Hospital & Clinic Bulk Supply</span>
+            <span class="btn-subtitle">Wholesale & Institutional Orders</span>
+          </div>
+        </a>
+
+        <a href="#prescription" class="btn-hero btn-secondary-action">
+          <span class="btn-icon">📤</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Upload Prescription</span>
+            <span class="btn-subtitle">Fast Photo / PDF Fulfillment</span>
+          </div>
+        </a>
+
+        <a href="#medicines" class="btn-hero btn-secondary-action">
+          <span class="btn-icon">🔍</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Search Medicines</span>
+            <span class="btn-subtitle">Live Catalog & Pricing</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Trust Badges & Highlights -->
+      <div class="hero-features-grid">
+        <div class="hero-feature-card">
+          <div class="feature-icon">⏰</div>
+          <h3>Always Open 24/7</h3>
+          <p>Day, night, weekends, and holidays. We are open for critical midnight emergencies.</p>
+        </div>
+        <div class="hero-feature-card">
+          <div class="feature-icon">💊</div>
+          <h3>Every Kind of Medicine</h3>
+          <p>Comprehensive inventory of antibiotics, trauma drugs, chronic therapies, and rare treatments.</p>
+        </div>
+        <div class="hero-feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Prime Hospital Location</h3>
+          <p>Directly in front of Arba Minch General Hospital for immediate patient convenience.</p>
+        </div>
+        <div class="hero-feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Institutional B2B Supply</h3>
+          <p>Dedicated supply chain for private clinics, public hospitals, and regional health centers.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li><strong>Prescription Refills:</strong> Quick and hassle-free prescription fulfillment.</li>
-        <li><strong>Health Screenings:</strong> Regular blood pressure and glucose checks.</li>
-        <li><strong>Vaccinations:</strong> Flu shots and routine immunizations available daily.</li>
-      </ul>
+    <!-- 2. About Us Section -->
+    <section id="about" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">About Our Pharmacy</span>
+        <h2>Serving the Arba Minch Community Since 2016</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Established on <strong>November 21, 2016</strong>, <strong>Kana Drug Store</strong> was founded with a singular, vital mission: to ensure that no patient or medical facility in Arba Minch and the wider Gamo zone ever lacks access to critical, authentic, and life-saving pharmaceuticals.
+          </p>
+          <p>
+            Strategically located <strong>in front of Arba Minch General Hospital</strong> and just minutes from <strong>Arba Minch Referral Hospital</strong>, our pharmacy serves as an essential healthcare anchor. We operate <strong>24 hours a day, 7 days a week, 365 days a year</strong>, ensuring that families confronting late-night emergencies and healthcare practitioners performing acute interventions always have an open door.
+          </p>
+          
+          <div class="about-highlights-box">
+            <h3>Our Dual Commitment:</h3>
+            <ul>
+              <li>
+                <strong>For Individual Citizens (B2C):</strong> Compassionate counseling, rapid prescription fulfillment, affordable local pricing in ETB, and the guarantee that we stock "every kind of medicine" you or your loved ones require.
+              </li>
+              <li>
+                <strong>For Healthcare Institutions (B2B):</strong> Dedicated wholesale procurement for hospitals, private clinics, diagnostic centers, and NGOs. We offer bulk inventory stability, strict regulatory batch compliance, and scheduled deliveries.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-info-cards">
+          <div class="info-card-highlight">
+            <h4>🏪 Business Summary</h4>
+            <ul class="summary-list">
+              <li><strong>Pharmacy Name:</strong> Kana Drug Store</li>
+              <li><strong>Established Date:</strong> November 21, 2016</li>
+              <li><strong>Operating Schedule:</strong> 24 Hours / 7 Days a Week (Never Closed)</li>
+              <li><strong>Location:</strong> In front of Arba Minch General Hospital, near Arba Minch Referral Hospital</li>
+              <li><strong>Direct Phone:</strong> <a href="tel:0922142311">0922142311</a></li>
+              <li><strong>Official Email:</strong> <a href="mailto:bekellidetu@gmail.com">bekellidetu@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div class="emergency-callout-card">
+            <div class="emergency-icon">🚨</div>
+            <h4>Midnight Emergency?</h4>
+            <p>Our pharmacists are on duty 24/7. If you need urgent medication, call us immediately or walk in anytime.</p>
+            <a href="tel:0922142311" class="btn-emergency-dial">📞 Call 0922142311 Now</a>
+          </div>
+        </div>
+      </div>
     </section>
+
 
     <!-- Medicines Section -->
     <section id="medicines">
@@ -264,12 +447,180 @@
       </div>
     </section>
 
-    <!-- Shopping Cart Section -->
-    <section id="cart">
-      <h2>Your Shopping Cart 🛒</h2>
+    <!-- 4. Services Section -->
+    <section id="services" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Patient & Clinical Services</span>
+        <h2>Complete Pharmacy Services in Arba Minch</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>24/7 Emergency Medicine Dispensing</h3>
+          <p>Instant access to life-critical and emergency therapeutic drugs at any hour of the night.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Prescription Verification & Refills</h3>
+          <p>Careful prescription safety checks by licensed pharmacists with clear dosage instructions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚚</div>
+          <h3>Hospital Delivery & Fast Dispatch</h3>
+          <p>Direct handover to patient bedsides in Arba Minch General Hospital and Referral Hospital.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>Clinical Supplies & Diagnostic Kits</h3>
+          <p>Glucometers, BP monitors, surgical dressings, sterile IV sets, and catheter supplies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Bulk Supply / B2B Section for Hospitals and Clinics -->
+    <section id="b2b" class="content-section b2b-section">
+      <div class="section-header">
+        <span class="section-tag">Institutional Procurement & Wholesale</span>
+        <h2>Hospital, Clinic & Organizational Bulk Supply</h2>
+        <p>Speaking directly to Procurement Officers, Medical Directors, and Clinic Managers across Arba Minch and Southern Ethiopia.</p>
+      </div>
+
+      <div class="b2b-content-grid">
+        <div class="b2b-info-column">
+          <h3>Why Regional Healthcare Facilities Partner with Kana Drug Store:</h3>
+          
+          <div class="b2b-benefit-item">
+            <span class="b2b-check">✓</span>
+            <div>
+              <strong>Guaranteed Authentic Supply Chain:</strong>
+              <p>Direct sourcing from certified pharmaceutical importers and EFDA-approved distributors with batch lot tracking.</p>
+            </div>
+          </div>
+
+          <div class="b2b-benefit-item">
+            <span class="b2b-check">✓</span>
+            <div>
+              <strong>Priority Wholesale Pricing:</strong>
+              <p>Tiered commercial pricing designed to support sustainable operations for private clinics and health institutions.</p>
+            </div>
+          </div>
+
+          <div class="b2b-benefit-item">
+            <span class="b2b-check">✓</span>
+            <div>
+              <strong>Emergency Stock Reserve:</strong>
+              <p>Buffer stock availability for high-demand surgical, obstetric, and trauma pharmaceuticals when standard supply chains stall.</p>
+            </div>
+          </div>
+
+          <div class="b2b-benefit-item">
+            <span class="b2b-check">✓</span>
+            <div>
+              <strong>Direct Hospital Proximity:</strong>
+              <p>Zero transit delays — located immediately across from Arba Minch General Hospital.</p>
+            </div>
+          </div>
+
+          <div class="b2b-direct-contact">
+            <p><strong>Need Immediate Institutional Quotations or Emergency Reorders?</strong></p>
+            <p>Call our Senior Procurement Liaison directly at <a href="tel:0922142311"><strong>0922142311</strong></a> or email <a href="mailto:bekellidetu@gmail.com"><strong>bekellidetu@gmail.com</strong></a>.</p>
+          </div>
+        </div>
+
+        <div class="b2b-form-column">
+          <div class="b2b-form-card">
+            <h3>📝 Request Wholesale / Institutional Quotation</h3>
+            <p>Submit your clinic or hospital medicine requirements:</p>
+            
+            <form id="b2b-inquiry-form" onsubmit="handleB2BInquiry(event)">
+              <div class="form-group">
+                <label for="b2b-institution">Institution / Clinic / Hospital Name:</label>
+                <input type="text" id="b2b-institution" name="institution" placeholder="e.g. Arba Minch Specialty Clinic" required>
+              </div>
+
+              <div class="form-group">
+                <label for="b2b-contact-name">Procurement Officer / Doctor Name:</label>
+                <input type="text" id="b2b-contact-name" name="contactName" placeholder="e.g. Dr. Bekele" required>
+              </div>
+
+              <div class="form-group">
+                <label for="b2b-phone">Official Phone Number:</label>
+                <input type="tel" id="b2b-phone" name="phone" placeholder="e.g. 0922142311" required>
+              </div>
+
+              <div class="form-group">
+                <label for="b2b-items">Medicine List & Estimated Quantities:</label>
+                <textarea id="b2b-items" name="items" rows="4" placeholder="List medications, batch sizes, IV fluids, or consumable supplies needed..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn b2b-btn" id="b2b-submit-btn">Submit Institutional Inquiry 📤</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Prescription Upload Section -->
+    <section id="prescription" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Direct Prescription Fulfillment</span>
+        <h2>Upload Your Prescription</h2>
+        <p>Send a clear photo or PDF of your doctor's prescription for quick preparation and bedside delivery.</p>
+      </div>
+
+      <form class="prescription-form">
+        <div class="form-group">
+          <label for="rx-name">Patient Full Name:</label>
+          <input type="text" id="rx-name" name="rx-name" placeholder="e.g. Abebe Bikila" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-phone">Phone Number (Required for confirmation):</label>
+          <input type="tel" id="rx-phone" name="rx-phone" placeholder="e.g. 0922142311" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-file">Upload Prescription Image/Document (JPG, PNG, WEBP, PDF - Max 10MB):</label>
+          <input type="file" id="rx-file" name="rx-file" accept="image/*,.pdf" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rx-notes">Additional Notes / Delivery Location (e.g. Hospital Ward, Home Kebele):</label>
+          <textarea id="rx-notes" name="rx-notes" rows="3" placeholder="Specify urgent delivery instructions, hospital room/ward, or special dosage notes..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="rx-submit-btn">Submit Prescription 📤</button>
+      </form>
+    </section>
+
+    <!-- 7. Pharmacist Review Dashboard Section -->
+    <section id="pharmacist-dashboard" class="content-section dashboard-section">
+      <div class="dashboard-header">
+        <div>
+          <h2>🩺 Pharmacist Clinical Dashboard</h2>
+          <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Internal review for prescription fulfillment & clinical status tracking</p>
+        </div>
+        <button type="button" onclick="fetchPharmacistPrescriptions()" class="refresh-btn">
+          🔄 Refresh Submissions
+        </button>
+      </div>
+
+      <div id="rx-dashboard-list" class="rx-dashboard-grid">
+        <p>Loading prescription submissions...</p>
+      </div>
+    </section>
+
+    <!-- 8. Shopping Cart Section -->
+    <section id="cart" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Review Your Items</span>
+        <h2>Your Shopping Cart 🛒</h2>
+      </div>
+
       <div class="cart-box">
         <ul id="cart-items" class="cart-list">
-          <li class="empty-msg">Your cart is currently empty. Add medicines above!</li>
+          <li class="empty-msg">Your cart is currently empty. Browse our medicines catalog above!</li>
         </ul>
         <div class="cart-summary">
           <h3>Total: <span id="cart-total">0</span> ETB</h3>
@@ -287,88 +638,47 @@
         </div>
         <form id="checkout-form">
           <div class="form-group">
-            <label for="order-name">Customer Full Name:</label>
+            <label for="order-name">Customer / Patient Full Name:</label>
             <input type="text" id="order-name" name="customerName" placeholder="e.g. Abebe Bikila" required>
           </div>
           <div class="form-group">
-            <label for="order-phone">Phone Number (Required for Delivery):</label>
-            <input type="tel" id="order-phone" name="phone" placeholder="e.g. +251 911 234 567" required>
+            <label for="order-phone">Phone Number (Required for Delivery Coordination):</label>
+            <input type="tel" id="order-phone" name="phone" placeholder="e.g. 0922142311" required>
           </div>
           <div class="form-group">
-            <label for="order-address">Delivery Address / Kebele / Street:</label>
-            <input type="text" id="order-address" name="deliveryAddress" placeholder="e.g. Bole Subcity, Woreda 03, House 456" required>
+            <label for="order-address">Delivery Address / Hospital Ward / Kebele:</label>
+            <input type="text" id="order-address" name="deliveryAddress" placeholder="e.g. Arba Minch General Hospital Ward 2, or Secha Kebele" required>
           </div>
           <div class="form-group">
             <label for="order-payment">Payment Method:</label>
-            <select id="order-payment" name="paymentMethod" style="width: 100%; padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; background: white;">
-              <option value="Cash on Delivery">Cash on Delivery</option>
-              <option value="Telebirr">Telebirr</option>
-              <option value="CBE Birr">CBE Birr</option>
+            <select id="order-payment" name="paymentMethod">
+              <option value="Cash on Delivery">Cash on Delivery / Pickup</option>
+              <option value="Telebirr">Telebirr Mobile Payment</option>
+              <option value="CBE Birr">CBE Birr (Commercial Bank of Ethiopia)</option>
             </select>
           </div>
-          <div style="margin: 1.5rem 0; padding: 10px; background: #f1f5f9; border-radius: 6px;">
-            <strong>Order Summary:</strong> <span id="modal-order-count">0</span> items | <strong>Total:</strong> <span id="modal-order-total">0</span> ETB
+          <div class="order-summary-box">
+            <strong>Order Summary:</strong> <span id="modal-order-count">0</span> items | <strong>Grand Total:</strong> <span id="modal-order-total">0</span> ETB
           </div>
           <button type="submit" class="submit-btn" id="confirm-order-btn">Confirm & Place Order 🚀</button>
         </form>
       </div>
     </div>
 
-    <!-- Prescription Upload Section -->
-    <section id="prescription">
-      <h2>Upload Your Prescription</h2>
-      <p>Upload a clear photo or PDF of your doctor's prescription for quick fulfillment.</p>
-      
-      <form class="prescription-form">
-        <div class="form-group">
-          <label for="rx-name">Patient Full Name:</label>
-          <input type="text" id="rx-name" name="rx-name" placeholder="e.g. Abebe Bikila" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rx-phone">Phone Number:</label>
-          <input type="tel" id="rx-phone" name="rx-phone" placeholder="e.g. +251 911 234 567" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rx-file">Upload Prescription Image/Document (JPG, PNG, PDF):</label>
-          <input type="file" id="rx-file" name="rx-file" accept="image/*,.pdf" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rx-notes">Additional Notes / Delivery Address:</label>
-          <textarea id="rx-notes" name="rx-notes" rows="3" placeholder="Specify preferred delivery times or health conditions..."></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn" id="rx-submit-btn">Submit Prescription 📤</button>
-      </form>
-    </section>
-
-    <!-- Pharmacist Review Dashboard Section -->
-    <section id="pharmacist-dashboard" style="padding: 25px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 40px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <h2>🩺 Pharmacist Dashboard - Prescription Review</h2>
-        <button type="button" onclick="fetchPharmacistPrescriptions()" style="padding: 8px 16px; background: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
-          🔄 Refresh List
-        </button>
+    <!-- 9. User Account / Login & Register Section -->
+    <section id="login" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Account Management</span>
+        <h2>User Login & Patient Portal</h2>
+        <p>Log in to track prescription status, view order history, and manage clinical records.</p>
       </div>
-
-      <div id="rx-dashboard-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;">
-        <p>Loading prescription submissions...</p>
-      </div>
-    </section>
-
-    <!-- User Account / Login Section -->
-    <section id="login">
-      <h2>User Login & Account</h2>
-      <p>Log in to view past order history and manage your prescriptions.</p>
 
       <div class="auth-box">
         <!-- Login Form -->
         <form class="login-form" id="login-form">
           <div class="form-group">
             <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="e.g. abebe@careplus.com" required>
+            <input type="email" id="email" name="email" placeholder="e.g. user@kanadrugstore.com" required>
           </div>
 
           <div class="form-group">
@@ -389,63 +699,148 @@
 
           <div class="form-group">
             <label for="reg-email">Email Address:</label>
-            <input type="email" id="reg-email" name="email" placeholder="e.g. abebe@careplus.com" required>
+            <input type="email" id="reg-email" name="email" placeholder="e.g. user@kanadrugstore.com" required>
           </div>
 
           <div class="form-group">
             <label for="reg-phone">Phone Number:</label>
-            <input type="tel" id="reg-phone" name="phone" placeholder="e.g. +251 911 234 567" required>
+            <input type="tel" id="reg-phone" name="phone" placeholder="e.g. 0922142311" required>
           </div>
 
           <div class="form-group">
-            <label for="reg-password">Password (min 6 characters):</label>
+            <label for="reg-password">Password (minimum 6 characters):</label>
             <input type="password" id="reg-password" name="password" placeholder="••••••••" minlength="6" required>
           </div>
 
-          <button type="submit" class="login-submit-btn" id="register-btn" style="background-color: #10b981;">Create Account 📝</button>
+          <button type="submit" class="login-submit-btn register-submit-btn" id="register-btn">Create Account 📝</button>
           <p class="auth-toggle">Already have an account? <a href="javascript:void(0)" onclick="toggleAuthMode('login')">Login here</a></p>
         </form>
       </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-      <h2>About CarePlus Pharmacy</h2>
-      <p>CarePlus Pharmacy is dedicated to providing compassionate care, authentic pharmaceuticals, and seamless delivery options to support healthy communities.</p>
-      <p><strong>Operating Hours:</strong> Monday – Saturday: 8:00 AM – 9:00 PM | Sunday: Emergency Services Only</p>
+    <!-- 10. Contact & Location Section -->
+    <section id="contact" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2>Contact Kana Drug Store</h2>
+        <p>Available 24 Hours a day, 7 days a week in Arba Minch, Ethiopia.</p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <div class="contact-details-card">
+          <h3>📍 Direct Location & Operating Hours</h3>
+          
+          <div class="contact-info-block">
+            <div class="ci-icon">📍</div>
+            <div>
+              <strong>Physical Location:</strong>
+              <p>In front of <strong>Arba Minch General Hospital</strong> & Near <strong>Arba Minch Referral Hospital</strong></p>
+              <p style="color: #64748b; font-size: 0.85rem;">Arba Minch, Gamo Zone, Southern Region, Ethiopia</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="ci-icon">⏰</div>
+            <div>
+              <strong>Operating Hours:</strong>
+              <p><span class="badge-247">Open 24 Hours / 7 Days a Week</span></p>
+              <p style="color: #64748b; font-size: 0.85rem;">Always open for midnight hospital emergencies and daytime prescriptions.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="ci-icon">📞</div>
+            <div>
+              <strong>Direct Phone (Click to Call):</strong>
+              <p><a href="tel:0922142311" class="prominent-phone">0922142311</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <strong>Official Email:</strong>
+              <p><a href="mailto:bekellidetu@gmail.com" class="prominent-email">bekellidetu@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="ci-icon">📅</div>
+            <div>
+              <strong>Established:</strong>
+              <p>November 21, 2016 (Serving the community with honor for over a decade)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>✉️ Send Us a Message / Inquiry</h3>
+          <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.2rem;">Have a question regarding medication availability or pricing? Send a message directly to our staff:</p>
+          
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="contact-name">Your Full Name:</label>
+              <input type="text" id="contact-name" name="name" placeholder="e.g. Dr. / Ato / W/ro..." required>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number:</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="e.g. 0922142311" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Your Message / Medicine Inquiry:</label>
+              <textarea id="contact-msg" name="message" rows="4" placeholder="Ask about specific medicines, hospital delivery, or wholesale quotes..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message 📨</button>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Send us a message or request general assistance:</p>
-      
-      <form>
-        <div>
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div>
-          <label for="message">Your Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
   </main>
 
-  <footer style="text-align: center; padding: 20px; background: #343a40; color: white; margin-top: 40px;">
-    <p>&copy; CarePlus Pharmacy Web Application. Built for reliable patient care.</p>
+  <!-- Sticky Mobile Emergency Call Bar (Dominant for Mobile Users) -->
+  <div class="mobile-emergency-bar">
+    <a href="tel:0922142311" class="mobile-call-btn">
+      <span class="pulse-dot"></span>
+      📞 <strong>CALL KANA DRUG STORE 24/7: 0922142311</strong>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Kana Drug Store</h3>
+        <p>Your trusted 24/7 pharmacy and institutional clinical supply partner in Arba Minch, Ethiopia. Established November 21, 2016.</p>
+        <p><strong>Location:</strong> In front of Arba Minch General Hospital, near Arba Minch Referral Hospital.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#medicines">Medicines Catalog</a></li>
+          <li><a href="#b2b">Hospital Bulk Supply</a></li>
+          <li><a href="#prescription">Upload Prescription</a></li>
+          <li><a href="#contact">Contact & Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>24/7 Direct Contact</h4>
+        <p>📞 Phone: <a href="tel:0922142311">0922142311</a></p>
+        <p>✉️ Email: <a href="mailto:bekellidetu@gmail.com">bekellidetu@gmail.com</a></p>
+        <p>⏰ Hours: 24 Hours / 7 Days a Week</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kana Drug Store. All rights reserved. Licensed Pharmacy & Medical Supply in Arba Minch, Ethiopia.</p>
+    </div>
   </footer>
 
   <!-- Toast Notifications Container -->
   <div id="toast-container"></div>
 
-  <!-- External JavaScript file linking -->
+  <!-- External JavaScript Application Logic -->
   <script src="script.js"></script>
 
 </body>

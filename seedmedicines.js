@@ -222,7 +222,7 @@ const sampleMedicines = [
 
 const seedDB = async () => {
   try {
-    const uri = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/careplus_pharmacy';
+    const uri = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/kana_drug_store';
     await mongoose.connect(uri);
     console.log('🔄 Connected to MongoDB for seeding...');
     
@@ -230,7 +230,7 @@ const seedDB = async () => {
     console.log('🧹 Cleared existing medicine records.');
     
     const inserted = await Medicine.insertMany(sampleMedicines);
-    console.log(`✅ Successfully seeded ${inserted.length} clinical medicines into CarePlus database!`);
+    console.log(`✅ Successfully seeded ${inserted.length} clinical medicines into Kana Drug Store database!`);
     
     await mongoose.connection.close();
     console.log('🔒 Database connection closed cleanly.');

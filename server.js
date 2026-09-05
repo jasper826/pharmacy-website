@@ -44,7 +44,9 @@ app.use('/api/prescriptions', prescriptionRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'CarePlus Pharmacy API',
+    service: 'Kana Drug Store API',
+    location: 'Arba Minch, Ethiopia',
+    schedule: '24/7 Always Open',
     database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
     timestamp: new Date().toISOString()
   });
@@ -75,24 +77,34 @@ app.use((err, req, res, next) => {
 /* =======================================================
    3. DATABASE CONNECTION & SERVER START
    ======================================================= */
-const MONGODB_URI = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/careplus_pharmacy';
+const MONGODB_URI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/kana_drug_store';
 
 let server;
 
-mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
-  .then(() => {
-    console.log('✅ Connected to MongoDB successfully.');
+// Asynchronous robust database connection
+const startServer = async () => {
+  try {
+    if (!MONGODB_URI) {
+      throw new Error('MONGODB_URI environment variable is not defined.');
+    }
+
+    await mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 });
+    console.log('✅ Connected to MongoDB database successfully.');
+
     server = app.listen(PORT, () => {
-      console.log(`🚀 CarePlus Pharmacy Server running at http://localhost:${PORT}`);
+      console.log(`🚀 Kana Drug Store Server running at http://localhost:${PORT}`);
+      console.log(`📍 Serving Arba Minch, Ethiopia (24/7 Always Open)`);
     });
-  })
-  .catch(err => {
-    console.error('❌ MongoDB Connection Error:', err.message);
-    console.log('⚠️ Running server in offline fallback mode.');
+  } catch (err) {
+    console.error('❌ Database Connection Error:', err.message);
+    console.log('⚠️ Running server in local development/fallback mode so frontend remains accessible.');
     server = app.listen(PORT, () => {
-      console.log(`🚀 Server running at http://localhost:${PORT} (offline fallback)`);
+      console.log(`🚀 Kana Drug Store Server running at http://localhost:${PORT} (fallback mode)`);
     });
-  });
+  }
+};
+
+startServer();
 
 // Graceful shutdown handling
 process.on('SIGTERM', () => {
